@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-project';
+  private router: Router = inject(Router);
+  activeTab?: string = '/';
+
+  onMenuClick(route: string) {
+    this.router.navigate([route]);
+    this.activeTab = route;
+  }
+  onButtonClick() {
+    console.log(this.router.url);
+  }
 }
