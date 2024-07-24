@@ -1,0 +1,12 @@
+<ix-content>
+  <ix-content-header slot="header" header-title="Users"> </ix-content-header>
+  <ag-grid-angular
+    style="height: 12rem; width: 100%"
+    class="ag-theme-alpine-dark ag-theme-ix"
+    [columnDefs]="columnDefs"
+    [rowData]="rowData"
+    rowSelection="multiple"
+    suppressCellFocus
+    checkboxSelection
+  ></ag-grid-angular>
+</ix-content>
