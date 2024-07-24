@@ -1,0 +1,22 @@
+<ix-content>
+  <ix-content-header slot="header" header-title="Products"> </ix-content-header>
+  <ix-layout-grid>
+    <ix-row>
+      <ag-grid-angular
+        #productsGrid
+        style="height: 50vh; width: 100%; margin-bottom: 2rem"
+        class="ag-theme-alpine-dark ag-theme-ix"
+        [columnDefs]="columnDefs"
+        [rowData]="products()"
+        rowSelection="multiple"
+        (cellValueChanged)="onEdit($event)"
+      ></ag-grid-angular
+    ></ix-row>
+    <ix-row style="gap: 1rem; justify-content: end">
+      <ix-button variant="primary" (click)="openAddModal()"
+        >Add product</ix-button
+      >
+      <ix-button variant="danger" (click)="openDeleteModal()">Delete</ix-button>
+    </ix-row>
+  </ix-layout-grid>
+</ix-content>
