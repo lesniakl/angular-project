@@ -7,17 +7,17 @@ import { AgGridAngular } from 'ag-grid-angular';
 import { ProductsComponent } from './products/products.component';
 import { AppRoutingModule } from './routing.module';
 import { UsersComponent } from './users/users.component';
-import AddProductComponent from './products/add-product/add-product.component';
 import { FormsModule } from '@angular/forms';
-import AddModalComponent from './products/add-product/modal.component';
+import AddModalComponent from './products/modals/addModal.component';
+import DeleteModalComponent from './products/modals/deleteModal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     UsersComponent,
-    AddProductComponent,
     AddModalComponent,
+    DeleteModalComponent,
   ],
   imports: [
     BrowserModule,
