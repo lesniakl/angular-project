@@ -1,0 +1,1 @@
+import{c}from"./chunk-SROII2KU.js";import{g as o}from"./chunk-2R6CW7ES.js";function r(e){return o(this,null,function*(){let t=document.createElement("ix-application-switch-modal");t.config=e;let i=(yield c({content:t,size:"840",closeOnBackdropClick:!0})).htmlElement.querySelector("ix-application-switch-modal");return n=>{i.config=n}})}export{r as a};
