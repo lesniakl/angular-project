@@ -1,0 +1,101 @@
+<ix-modal-header> Add a product </ix-modal-header>
+<ix-modal-content>
+  <form
+    #form="ngForm"
+    class="row g-3 needs-validation"
+    [ngClass]="{ 'was-validated': wasValidated }"
+    no-validate
+    (submit)="onSubmit(form)"
+  >
+    <div class="col-md-8">
+      <ix-validation-tooltip message="Enter product's name">
+        <label htmlFor="validationProductName" class="form-label">
+          Product name
+        </label>
+        <input
+          name="product_name"
+          type="text"
+          id="validationProductName"
+          [(ngModel)]="data.product_name"
+          #productName="ngModel"
+          required
+        />
+      </ix-validation-tooltip>
+    </div>
+
+    <div class="col-md-4">
+      <ix-validation-tooltip message="Enter product's price">
+        <label htmlFor="validationPrice" class="form-label"> Price (€)</label>
+        <input
+          name="price"
+          type="number"
+          id="validationPrice"
+          [(ngModel)]="data.price"
+          #price="ngModel"
+          required
+        />
+      </ix-validation-tooltip>
+    </div>
+
+    <div class="col-md-8">
+      <ix-validation-tooltip message="Enter manufacturer's name">
+        <label htmlFor="validationManufacturer" class="form-label">
+          Manufacturer
+        </label>
+        <input
+          name="manufacturer"
+          type="text"
+          id="validationManufacturer"
+          [(ngModel)]="data.manufacturer"
+          #manufacturer="ngModel"
+          required
+        />
+      </ix-validation-tooltip>
+    </div>
+
+    <div class="col-md-4">
+      <ix-validation-tooltip message="Enter product's current quantity">
+        <label htmlFor="validationQuantity" class="form-label">
+          Quantity
+        </label>
+        <input
+          name="quantity_in_stock"
+          type="number"
+          id="validationQuantity"
+          [(ngModel)]="data.quantity_in_stock"
+          #quantity_in_stock="ngModel"
+          required
+        />
+      </ix-validation-tooltip>
+    </div>
+
+    <div class="col-md-8">
+      <ix-validation-tooltip message="Enter release date">
+        <label htmlFor="validationDate" class="form-label">
+          Release date
+        </label>
+        <input
+          type="date"
+          name="release_date"
+          id="validationDate"
+          [(ngModel)]="data.release_date"
+          #release_date="ngModel"
+          required
+        />
+      </ix-validation-tooltip>
+    </div>
+    <div class="mt-4 row justify-content-center">
+      <ix-button
+        type="button"
+        outline
+        class="col-4 dismiss-modal"
+        (click)="activeModal.dismiss()"
+      >
+        Cancel
+      </ix-button>
+      <ix-button type="submit" class="col-6 close-modal">
+        Add product
+      </ix-button>
+    </div>
+  </form>
+</ix-modal-content>

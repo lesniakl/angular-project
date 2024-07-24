@@ -1,0 +1,18 @@
+<ix-modal-header>
+  Are you sure you want to delete selected products?
+</ix-modal-header>
+<ix-modal-content>
+  <div style="display: flex; justify-content: center; gap: 1rem">
+    <ix-button
+      type="button"
+      outline
+      class="dismiss-modal"
+      (click)="onDismiss()"
+    >
+      Cancel
+    </ix-button>
+    <ix-button type="button" class="close-modal" (click)="onConfirm()">
+      Confirm
+    </ix-button>
+  </div>
+</ix-modal-content>
