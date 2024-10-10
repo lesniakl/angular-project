@@ -6,3 +6,12 @@ export interface PRODUCT {
   manufacturer: string;
   release_date: string;
 }
+
+export interface USER {
+  name: string;
+  username: string;
+  email: string;
+  city: string;
+  phone: string;
+  website: string;
+}

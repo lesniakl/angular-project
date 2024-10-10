@@ -6,18 +6,19 @@ import { AppComponent } from './app.component';
 import { AgGridAngular } from 'ag-grid-angular';
 import { ProductsComponent } from './products/products.component';
 import { AppRoutingModule } from './routing.module';
-import { UsersComponent } from './users/users.component';
 import { FormsModule } from '@angular/forms';
 import AddModalComponent from './products/modals/addModal.component';
 import DeleteModalComponent from './products/modals/deleteModal.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    UsersComponent,
     AddModalComponent,
     DeleteModalComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,7 @@ import DeleteModalComponent from './products/modals/deleteModal.component';
     AgGridAngular,
     FormsModule,
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -7,8 +7,7 @@ export const columnDefs: ColDef[] = [
   {
     field: 'id',
     headerName: 'Product ID',
-    resizable: true,
-    flex: 1,
+    hide: true,
   },
   {
     field: 'product_name',

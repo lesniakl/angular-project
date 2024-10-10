@@ -1,0 +1,31 @@
+<ix-content-header headerTitle="Home"></ix-content-header>
+
+<ix-card-list label="Partners" hideShowAll="true" list-style="stack">
+  @for (user of users; track user.name) {
+  <ix-push-card
+    icon="globe"
+    notification="{{ user.website }}"
+    heading="{{ user.name }}"
+    subheading="{{ user.email }}"
+    variant="filled"
+  >
+    <ix-layout-grid>
+      <ix-key-value-list>
+        <ix-key-value
+          label="Phone"
+          labelPosition="left"
+          value="{{ user.phone }}"
+        ></ix-key-value>
+
+        <ix-key-value
+          label="City"
+          labelPosition="left"
+          value="{{ user.city }}"
+        ></ix-key-value>
+      </ix-key-value-list>
+    </ix-layout-grid>
+  </ix-push-card>
+  } @empty {
+  <ix-spinner size="large"></ix-spinner>
+  }
+</ix-card-list>

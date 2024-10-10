@@ -6,18 +6,12 @@
   <ix-menu enableToggleTheme="true">
     <ix-menu-item
       home-tab
-      tab-icon="home"
+      tab-icon="workspace"
       (click)="onMenuClick('/')"
       [attr.active]="activeTab === '/'"
     >
       Home
     </ix-menu-item>
-    <ix-menu-item
-      tab-icon="user-management-filled"
-      (click)="onMenuClick('users')"
-      [attr.active]="activeTab === 'users'"
-      >Users</ix-menu-item
-    >
     <ix-menu-item
       tab-icon="product-management"
       (click)="onMenuClick('products')"
@@ -25,6 +19,5 @@
       >Products</ix-menu-item
     >
   </ix-menu>
-
-  <router-outlet></router-outlet>
+  <ix-content> <router-outlet></router-outlet></ix-content>
 </ix-application>
